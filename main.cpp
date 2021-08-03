@@ -232,6 +232,7 @@ int main(int argc, char* argv[]) {
     printf("%s",mac_target);
 
     std::string target_mac =std::string(mac_target);
+    printf("\n%s",target_mac.c_str());
     pcap_close(pcap2);
     for(int i=0;i<100;i++)
         printf("");
@@ -239,7 +240,7 @@ int main(int argc, char* argv[]) {
 
 
     for(int i=0;i<1000;i++)
-        attack("A6:FF:90:BE:4D:28",str_mac,sender_ip);
+        attack(target_mac.c_str(),str_mac,sender_ip);
 
 
 
